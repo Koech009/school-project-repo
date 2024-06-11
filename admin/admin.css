@@ -1,0 +1,359 @@
+
+body, html {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    padding: 20px;
+}
+/* Header styles */
+.header {
+    background-color: #21563b;
+    color: white;
+    display: flex;
+    justify-content: space-between; 
+    text-align: center;
+    padding: 10px 20px;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.header .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.post {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.post h3 {
+    margin-top: 0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.dashboard-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header-right {
+    float: right;
+}
+
+.header-right a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.header-right i {
+    margin-right: 5px;
+}
+
+/* Sidebar styles */
+.sidebar {
+    background-color: #394263;
+    color: white;
+    width: 250px;
+    position: fixed;
+    top: 60px; 
+    left: 0;
+    bottom: 0;
+    overflow-y: auto;
+    z-index: 1;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+}
+.sidebar .logout {
+    padding: 15px 20px;
+    border-top: 1px solid #ddd;
+    display: block;
+}
+
+
+.has-submenu > a:after {
+    content: '\25BC';
+    float: right;
+}
+
+.submenu {
+    display: none;
+    background-color: #883263;
+}
+
+.has-submenu:hover .submenu {
+    display: block;
+}
+
+/* Main content styles */
+.crime-stats-container {
+    margin-left: 250px; 
+    padding: 20px;
+    padding-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    background-color: darkslategray;
+}
+.main{
+    padding-bottom: 80px;
+}
+
+/* Statistic box */
+.info-box {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Heading style */
+.info-box h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Statistic value style */
+.info-box p {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Button style */
+.info-box button {
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.info-box button:hover {
+    background-color: #388e3c;
+}
+
+.reports-table {
+    margin-left: 250px; 
+    padding: 20px;
+    padding-top: 80px; 
+    width: 100%;
+    border-collapse: collapse;
+    background-color:darkslategray;
+}
+.reports-table th, .reports-table td {
+    padding: 10px;
+    border: 1px solid #777;
+}
+.reports-table th {
+    background-color: #555;
+}
+.reports-table tr:nth-child(even) {
+    background-color: #444;
+}
+.reports-table tr:hover {
+    background-color: #555;
+}
+.action-buttons {
+    text-align: center;
+}
+.action-buttons button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.action-buttons button:hover {
+    background-color: #218838;
+}
+.reports-table img {
+    max-width: 150px;
+    max-height: 150px;
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* Form styles */
+form {
+    background-color: #f8f9fa;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-top: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #495057;
+    font-size: 14px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form input[type="date"],
+form input[type="tel"],
+form input[type="file"],
+form input[type="datetime-local"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+form button[type="submit"] {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: 100%;
+}
+form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+.alert {
+    margin-top: 20px;
+}
+
+.alert-danger {
+    background-color: #ffe5e5;
+    color: #d9534f;
+    border: 1px solid #d9534f;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.alert-success {
+    background-color: #e6f7e3;
+    color: #5cb85c;
+    border: 1px solid #5cb85c;
+    border-radius: 4px;
+    padding: 10px;
+}
+.footer{
+    
+    background-color: #21563b;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+@media (max-width: 992px) {
+    .sidebar {
+        width: 200px;
+    }
+    .crime-stats-container {
+        margin-left: 200px; 
+        grid-template-columns: repeat(5, 1fr); 
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 150px;
+    }
+    .crime-stats-container {
+        margin-left: 150px; 
+        grid-template-columns: repeat(5, 1fr); 
+    }
+}

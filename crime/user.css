@@ -1,0 +1,655 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700");
+body, html {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* Header styles */
+.header {
+    background-color: #21563b;
+    color: white;
+    display: flex;
+    justify-content: space-between; 
+    text-align: center;
+    padding: 10px 20px;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.header .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.post {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.post h3 {
+    margin-top: 0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.dashboard-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header-right {
+    float: right;
+}
+
+.header-right a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.header-right i {
+    /* margin-right: 5px; */
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+.header-right h3 {
+    margin: 0; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    max-width: 200px; 
+}
+
+
+/* Sidebar styles */
+.sidebar {
+    background-color: #394263;
+    color: white;
+    width: 250px;
+    position: fixed;
+    top: 60px; 
+    left: 0;
+    bottom: 0;
+    overflow-y: auto;
+    z-index: 1;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+}
+.sidebar .logout {
+    padding: 15px 20px;
+    border-top: 1px solid #ddd;
+    display: block;
+}
+
+
+.has-submenu > a:after {
+    content: '\25BC';
+    float: right;
+}
+
+.submenu {
+    display: none;
+    background-color: #883263;
+}
+
+.has-submenu:hover .submenu {
+    display: block;
+}
+
+.promo_card{
+    width: 90%;
+    color: #fff;
+    margin-top: 10px;
+    border-radius: 8px;
+    padding: 0.5rem 1rem 1rem 3rem;
+    background: rgb(37, 37, 37);
+  }
+  .promo_card h1, .promo_card span, a, button{
+    margin: 10px;
+    text-decoration: none; 
+    color: white;
+
+
+
+  }
+  .promo_card button{
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #28a745;
+    margin-right: 10px;   
+  }
+  
+  .input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+#message {
+    border: none;
+    outline: none;
+    padding: 10px;
+    flex-grow: 1;
+}
+#send-icon {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 20px;
+}
+/* Main content styles */
+.crime-stats-container {
+    margin-left: 250px; 
+    padding: 20px;
+    padding-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    background-color: darkslategray;
+}
+.main{
+    padding-bottom: 80px;
+}
+
+
+/* Statistic box */
+.info-box {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Heading style */
+.info-box h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Statistic value style */
+.info-box p {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Button style */
+.info-box button {
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.info-box button:hover {
+    background-color: #388e3c;
+}
+
+.reports-table {
+    margin-left: 250px; 
+    padding: 20px;
+    padding-top: 80px; 
+    width: 100%;
+    border-collapse: collapse;
+    background-color:darkslategray;
+}
+.reports-table th, .reports-table td {
+    padding: 10px;
+    border: 1px solid #777;
+}
+.reports-table th {
+    background-color: #555;
+}
+.reports-table tr:nth-child(even) {
+    background-color: #444;
+}
+.reports-table tr:hover {
+    background-color: #555;
+}
+.action-buttons {
+    text-align: center;
+}
+.action-buttons button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.action-buttons button:hover {
+    background-color: #218838;
+}
+.reports-table img {
+    max-width: 150px;
+    max-height: 150px;
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.container {
+
+    display: flex;
+    max-width: 1000px; 
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin-top: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+.container h2{
+    text-align: center;
+}
+.user-details {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.user-details h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.user-details table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.user-details table td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.user-details table td:first-child {
+    font-weight: bold;
+    width: 30%;
+}
+
+.user-details table tr:last-child td {
+    border-bottom: none;
+}
+/* Form styles */
+form {
+    background-color: #f8f9fa;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-top: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #495057;
+    font-size: 14px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="password"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="datetime-local"], 
+form input[type="date"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+form button[type="submit"] {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: 100%;
+}
+form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+.search-container {
+    margin-bottom: 20px;
+}
+
+.search-container input[type=text] {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 30%;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: white;
+    padding-left: 40px; 
+}
+
+.search-container input[type=text]:focus {
+    outline: none;
+    border-color: #719ECE;
+    box-shadow: 0 0 8px 0 #719ECE;
+}
+
+/* Sidebar Styles */
+.notification-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333; 
+    padding: 10px;
+    border-bottom: 1px solid #ddd; 
+}
+
+.notification-item .num {
+    display: inline-block;
+    background-color: #ff0000; 
+    color: #fff; 
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.8em;
+    margin-left: 10px; 
+    vertical-align: middle;
+}
+
+.notification-item .fas {
+    margin-right: 5px;
+}
+
+.sidebar-link {
+    color: inherit; /* Ensures the link color matches .notification-item */
+    display: flex;
+    align-items: center;
+}
+
+
+/* Chat container styling */
+.chat-container {
+    width: 100%;
+    max-width: 800px; 
+    height: 500px; 
+    border: 1px solid #ccc;
+    border-radius: 10px; 
+    overflow: hidden;
+    background-color: #fff; 
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+    margin: auto; 
+}
+
+/* Chat box styling */
+#chat-box {
+    flex-grow: 1;
+    padding: 15px; 
+    overflow-y: auto;
+    background-color: #e5ddd5; 
+}
+
+/* Input container styling */
+.input-container {
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f0f0f0; 
+    display: flex;
+}
+
+/* User input styling */
+#user-input {
+    flex-grow: 1;
+    border: none; 
+    border-radius: 20px; 
+    padding: 10px 15px; 
+    margin-right: 10px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2); 
+}
+
+/* Send button styling */
+button {
+    background-color: #075E54; 
+    border: none;
+    border-radius: 50%; 
+    padding: 10px 12px; 
+    color: white;
+    cursor: pointer;
+    font-size: 24px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover {
+    background-color: #128C7E; 
+}
+
+/* Send icon styling */
+.fas.fa-paper-plane {
+    color: white;
+}
+
+/* Sender's message styling */
+.sender-message {
+    background-color: #DCF8C6;
+    padding: 8px 12px; 
+    border-radius: 7px; 
+    margin: 5px 0; 
+    align-self: flex-end;
+    max-width: 60%; 
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05); 
+    font-size: 14px; 
+    margin-left: auto;
+}
+
+/* Receiver's message styling */
+.receiver-message {
+    background-color: #fff;
+    padding: 8px 12px;
+    border-radius: 7px;
+    margin: 5px 0;
+    align-self: flex-start;
+    max-width: 60%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    font-size: 14px;
+}
+
+.alert {
+    margin-top: 20px;
+}
+
+.alert-danger {
+    background-color: #ffe5e5;
+    color: #d9534f;
+    border: 1px solid #d9534f;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.alert-success {
+    background-color: #e6f7e3;
+    color: #5cb85c;
+    border: 1px solid #5cb85c;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.community-forum{
+    /* width: 100%; */
+    max-width: 1000px; 
+    height: 500px; 
+    border: 1px solid #ccc;
+    border-radius: 10px; 
+    background-color: #fff; 
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+    margin: auto; 
+}
+
+.post-image img, .post-video video {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.comments {
+    margin-top: 20px;
+}
+
+.comment {
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+.comment p {
+    margin: 0;
+    color: #bb8810;
+}
+
+.comment-form, .delete-form {
+    margin-top: 20px;
+}
+
+.comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    resize: vertical;
+}
+
+.comment-form button, .delete-form button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+}
+
+.comment-form button:hover, .delete-form button:hover {
+    background-color: #218838;
+}
+
+.delete-form button {
+    background-color: #dc3545;
+}
+
+.delete-form button:hover {
+    background-color: #c82333;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.footer{
+    
+    background-color: #21563b;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+@media (max-width: 992px) {
+    .sidebar {
+        width: 200px;
+    }
+    .crime-stats-container {
+        margin-left: 200px; 
+        grid-template-columns: repeat(5, 1fr); 
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 150px;
+    }
+    .crime-stats-container {
+        margin-left: 150px; 
+        grid-template-columns: repeat(5, 1fr); 
+    }
+}
